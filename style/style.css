@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+:root {
+    --color-1: #FFC7EA;
+    --color-2: #D8B4F8;
+    --color-3: #FBF0B2;
+    --color-4: #1C1C36;
+    --font-family: 'Titan One', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+*::selection {
+    background: var(--color-3);
+    color: var(--color-2);
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-1);
+}
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: -1;
+}
+.heart-img {
+    width: 4rem;
+    opacity: 0.8;
+    animation: float 4s linear infinite;
+}
+.heart-img:nth-child(2), .heart-img:nth-child(6), .heart-img:nth-child(10), .heart-img:nth-child(14) {
+    animation-duration: 5s;
+}
+.heart-img:nth-child(3), .heart-img:nth-child(7), .heart-img:nth-child(11), .heart-img:nth-child(15) {
+    animation-duration: 5.5s;
+}
+.heart-img:nth-child(4), .heart-img:nth-child(8), .heart-img:nth-child(12), .heart-img:nth-child(16) {
+    animation-duration: 8s;
+}
+@keyframes float {
+    from {
+        transform: translateY(60%);
+    }
+    to {
+        transform: translateY(-60%);
+    }
+}
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+.title {
+    font-family: var(--font-family);
+    font-size: 2rem;
+    color: var(--color-2);
+    -webkit-text-stroke: 1px var(--color-4);
+    text-shadow: 3px 3px 0 var(--color-4);
+}
+.title-strong {
+    font-size: 2.5rem;
+    color: var(--color-3);
+}
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+.btn {
+    padding: 8px 28px;
+    border: 2px solid var(--color-4);
+    border-radius: 5px;
+    background-color: var(--color-3);
+    box-shadow: 3px 3px 0 var(--color-4);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 1.3rem;
+    color: var(--color-2);
+    -webkit-text-stroke: 1px var(--color-4);
+    text-shadow: 3px 3px 0 var(--color-4);
+}
+.btn:hover {
+    box-shadow: 1px 1px 0 var(--color-4);
+    transform: translate(1px, 1px);
+}
+.img {
+    max-width: 40%;
+    min-width: 18rem;
+}
